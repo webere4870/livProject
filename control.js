@@ -54,3 +54,42 @@ function changeSlides(idNumber)
     }
     myArray[idNumber].style.display = 'flex';
 }
+
+function upOrDown(addOrSub)
+{
+    let currentSlide =0;
+    let selector = document.querySelectorAll('.labelRow input');
+    for(let counter =0; counter < selector.length; counter++)
+    {
+        if(selector[counter].checked === true)
+        {
+            currentSlide = counter;
+        }
+    }
+
+    console.log(currentSlide);
+
+    if(addOrSub === 'plus')
+    {
+        if(currentSlide === selector.length -1)
+        {
+            currentSlide = 0;
+        }
+        else
+        {
+            currentSlide = currentSlide + 1;
+        }
+    }
+    else{
+        if(currentSlide === 0)
+        {
+            currentSlide = selector.length -1;
+        }
+        else
+        {
+            currentSlide = currentSlide -1;
+        }
+    }
+    selector[currentSlide].checked = true;
+    changeSlides(currentSlide);
+}
