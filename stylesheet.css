@@ -1,0 +1,589 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.styled
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./images/mainBackground.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    display: none;
+}
+
+.navigationBar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    margin-top: 15px;
+    position: absolute;
+    top: 10px;
+    max-width: 100vw;
+    justify-content: center;
+}
+
+.smallNavigationBar
+{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.smallNavigationBar a{
+    margin-bottom: 7vh;
+    font-family: 'Spartan', cursive;
+    text-decoration: none;
+}
+
+.smallNavigationBar *
+{
+    color: white;
+}
+
+.xButton
+{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.smallLogo
+{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    display: none;
+}
+
+.smallLogo *
+{
+    color: white;
+}
+
+.xButton:hover
+{
+    cursor: pointer;
+}
+
+
+.navigationBar > *
+{
+    color: white;
+}
+
+.navigationBar a
+{
+    margin-left: 35px;
+    font-size: 20px;
+    font-family: 'Waiting for the Sunrise', cursive;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hoverable:hover
+{
+    text-decoration: underline;
+}
+
+.noLeft
+{
+    margin-left: 0;
+}
+
+.hamburger
+{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: none;
+}
+
+
+/* #firstPageDiv
+{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr 300px 1fr;
+    grid-template-areas: 
+    "one two three"
+    "four five six"
+    "seven eight nine";
+}
+
+
+#left
+{
+    grid-area: four;
+    transform: rotate(-90deg);
+    justify-self: flex-end;
+    align-self: center;
+}
+
+#right
+{
+    grid-area: six;
+    transform: rotate(90deg);
+    justify-self: flex-start;
+    align-self: center;
+}
+
+#top
+{
+    grid-area: two;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+#bottom
+{
+    grid-area: eight;
+    transform: rotate(180deg);
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.btn {
+    width: 300px;
+    height: 300px;
+    border: 3px solid white;
+    grid-area: five;
+} */
+
+.firstPageDiv
+{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+
+#bigQuote
+{
+    font-family: 'Spartan', sans-serif;
+    color: white;
+    font-size: 30px;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#otherQuote
+{
+    width: 100%;
+    margin-right: auto;
+    justify-self: flex-start;
+    align-self: center;
+    text-align: center;
+}
+
+button
+{
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2));
+    border: 2px solid white;
+    color: white;
+    padding: 10px 40px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button:hover
+{
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    cursor: pointer;
+}
+
+.signature
+{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border-left: 7px solid white;
+    border-right: 7px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+
+
+.signature:hover
+{
+    text-decoration: none;
+    transform: rotateY(720deg);
+    transform-style: preserve-3d;
+}
+
+.cursive
+{
+    font-family: 'Rochester', cursive;
+}
+
+.smallQuote
+{
+    font-family: 'Amatic SC', cursive;
+    font-weight: lighter;
+    font-size: 55px;
+    margin-top: -30px;
+}
+
+.outOfPosition
+{
+    position: absolute;
+    height: 100vh;
+    left: 15px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+i
+{
+    font-size: 35px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.smallNavigationBar i
+{
+    padding: 15px;
+}
+
+.outOfPosition i:hover
+{
+    font-size: 50px;
+}
+
+.hamburger i:hover
+{
+    cursor: pointer;
+}
+
+.twoColumn
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    margin-top: 125px;
+}
+
+
+
+.aboutPicture
+{
+    border-radius: 50%;
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+
+.aboutPicture img{
+    border-radius: 50%;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    padding: 10px;
+}
+
+.aboutPicture span{
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 50px;
+}
+
+.aboutSlide h1
+{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+    font-weight: normal;
+    align-self: flex-end;
+    padding: 0 15px;
+}
+
+
+
+.aboutSlide p
+{
+    font-family: 'Spartan', cursive;
+    font-size: 20px;
+    color: white;
+    padding: 0 15px;
+}
+
+
+
+.leftAlign p, .leftAlign h1
+{
+ text-align: left;
+ align-self: flex-start;
+}
+
+.leftAlign
+{
+    border-left: 5px solid white;
+}
+
+.rightAlign p, .rightAlign h1
+{
+ text-align: right;
+ align-self: flex-end;
+}
+
+.rightAlign
+{
+    border-right: 5px solid white;
+}
+
+.aboutSlide
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    margin: 0 20px;
+}
+
+.loader
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    z-index: 10000;
+}
+
+.circle1, .circle2, .circle3
+{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.relativer
+{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.circle1
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-top: 5px solid red;
+    border-left: 5px solid red;
+    transform: rotate(90deg);
+    animation-name: myLoader;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    position: absolute;
+    top: calc((100vh-200px)/2);
+    left: calc((100vw-200px)/2);
+}
+
+.circle2
+{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border-top: 5px solid rgb(212, 0, 184);
+    border-left: 5px solid rgb(212, 0, 184);
+    transform: rotate(-180deg);
+    animation-name: myLoaderTwo;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    position: absolute;
+    position: absolute;
+    top: calc((100vh-170px)/2);
+    left: calc((100vw-170px)/2);
+}
+
+.circle3
+{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border-top: 5px solid rgb(169, 1, 247);
+    border-left: 5px solid rgb(169, 1, 247);
+    transform: rotate(90deg);
+    position: relative;
+    animation-name: myLoader;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    position: absolute;
+    position: absolute;
+    top: calc((100vh-140px)/2);
+    left: calc((100vw-140px)/2);
+}
+
+.circleLetters
+{
+    position: absolute;
+    font-family: 'Rochester', cursive;
+    color: white;
+    font-size: 25px;
+}
+
+.pictureBlock
+{
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes myLoader
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(90deg);
+    }
+    50%
+    {
+        transform: rotate(180deg);
+    }
+    75%
+    {
+        transform: rotate(270deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes myLoaderTwo
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    25%
+    {
+        transform: rotate(-90deg);
+    }
+    50%
+    {
+        transform: rotate(-180deg);
+    }
+    75%
+    {
+        transform: rotate(-270deg);
+    }
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.quoteSlideShow
+{
+    height: 300px;
+    width: 400px;
+    position: relative;
+    background: black;
+    margin-top: 30px;
+    padding-right: 100px;
+}
+
+.labelRow
+{
+    z-index: 10000;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.rightChev
+{
+    position: absolute;
+    right: 5px;
+    top: calc(45%);
+}
+
+.leftChev
+{
+    position: absolute;
+    left: 5px;
+    top: calc(45%);
+    font-size: 20px;
+}
+
+.slide
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#firstSlide
+{
+    display: flex;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 1080px)
+{
+    .navigationBar{
+        display: none;
+    }
+    .hamburger
+    {
+        display: block;
+    }
+}

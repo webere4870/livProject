@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Rochester&family=Spartan:wght@200&family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dfda23e54c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="styled">
+        <div class="smallLogo">
+            <a class="signature"><h1 class="cursive">L B</h1></a>
+        </div>
+        <div class="smallNavigationBar">
+            <a class="signature"><h1 class="cursive">L B</h1></a>
+            <a href="index.html" class="noLeft hoverable">Home</a>
+            <a href="about.html" class="hoverable">About Me</a>
+            <a href="gallery.html" class="hoverable">Gallery</a>
+            <a href="contact.html" class="hoverable">Contact</a>
+            <div class="xButton">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="firstPageDiv">
+            <div class="outOfPosition">
+                <a href="https://www.instagram.com/liviya.24/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fas fa-address-book"></i></a>
+            </div>
+            <div class="navigationBar">
+                <a href="index.html" class="noLeft hoverable">Home</a>
+                <a href="about.html" class="hoverable">About Me</a>
+                <a class="signature"><h1 class="cursive">L B</h1></a>
+                <a href="gallery.html" class="hoverable">Gallery</a>
+                <a href="contact.html" class="hoverable">Contact</a>
+            </div>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="twoColumn">
+                <div class="aboutSlide rightAlign">
+                    <h1>Biography</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga nostrum libero autem. Officia pariatur quae mollitia a labore molestiae deserunt facilis architecto error, magni cupiditate, incidunt repellat ducimus ab.</p>
+                </div>
+                <div class="aboutPicture">
+                    <img src="images/aboutPicture2.png" alt="">
+                    <span>Hi, I'm Liv :)</span>
+                </div>
+            </div>
+            <div class="twoColumn">
+                <div class="quoteSlideShow">
+                    <div class="pictureBlock">
+                        <div class="slide" id="firstSlide">
+                            <p>Hello</p>
+                        </div>
+                        <div class="slide">
+                            <p>Test</p>
+                        </div>
+                        <div class="slide">
+                            <p>This</p>
+                        </div>
+                        <div class="slide">
+                            <p>Guy</p>
+                        </div>
+                    </div>
+                    <div class="rightChev">
+                        <i class="fas fa-chevron-right" onclick="upOrDown('minus')"></i>
+                    </div>
+                    <div class="leftChev" onclick="upOrDown('plus')">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="labelRow">
+                        <input type="radio" name="label" onclick="changeSlides(0)" checked>
+                        <input type="radio" name="label" onclick="changeSlides(1)">
+                        <input type="radio" name="label" onclick="changeSlides(2)">
+                        <input type="radio" name="label" onclick="changeSlides(3)">
+                    </div>
+                </div>
+                <div class="aboutSlide leftAlign">
+                    <h1>Hobbies</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga nostrum libero autem. Officia pariatur quae mollitia a labore molestiae deserunt facilis architecto error, magni cupiditate, incidunt repellat ducimus ab.</p>
+                </div>
+            </div>
+            <div class="twoColumn">
+                <div class="aboutSlide rightAlign">
+                    <h1>My Work</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga nostrum libero autem. Officia pariatur quae mollitia a labore molestiae deserunt facilis architecto error, magni cupiditate, incidunt repellat ducimus ab.</p>
+                </div>
+                <div class="aboutPicture">
+                    <img src="images/aboutPicture2.png" alt="">
+                    <span>Hi, I'm Liv :)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="control.js"></script>
+</body>
+</html>
