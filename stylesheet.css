@@ -17,6 +17,7 @@
     display: none;
 }
 
+
 .navigationBar
 {
     display: flex;
@@ -537,6 +538,37 @@ i
     padding-right: 100px;
 }
 
+.quoteSlideShow p
+{
+    font-family: 'Spartan', cursive;
+    font-size: 55px;
+}
+
+.quoteSlideShow > div > div > p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#slide1
+{
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide1.jpg");
+}
+
+#slide2
+{
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/slide2.jpg");
+}
+
+#slide3
+{
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide3.jpg");
+}
+
+#slide4
+{
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide4.jpg");
+}
+
 .labelRow
 {
     z-index: 10000;
@@ -588,11 +620,7 @@ i
     color: white;
 }
 
-#firstSlide
-{
-    display: flex;
-    color: white;
-}
+
 
 .artistQuote
 {
@@ -637,6 +665,145 @@ i
 .marginTop
 {
     padding-top: 150px;
+}
+
+.slideInfo
+{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85));
+    z-index: 15000;
+}
+
+#info1, #info2, #info3, #info4
+{
+    display: none;
+}
+
+
+
+.slideInfo p
+{
+    font-family: 'Spartan', cursive;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#closeInfo
+{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 20000;
+    display: none;
+}
+
+#closeInfo:hover
+{
+    cursor: pointer;
+}
+
+.limitHeight
+{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.texturedBackground
+{
+    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    overflow-x: hidden;
+}
+
+.carousel
+{
+
+    width: auto;
+    height: 300px;
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.carouselItem
+{
+    margin: 0 30px;
+    height: 300px;
+    width: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrowSpace
+{
+    margin-top: 20px;
+    display: flex;
+    
+}
+
+.carouselArrows
+{
+    margin: 0 50px;
+}
+
+.carouselArrows:hover{
+    cursor: pointer;
+}
+
+#gal1
+{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/gal5.JPG');
+}
+
+#gal2
+{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/gal4.JPG');
+}
+
+#gal3
+{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/gal1.JPG');
+}
+
+#gal4
+{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/gal2.JPG');
+}
+
+#gal5
+{
+    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url('/images/gal3.JPG');
+}
+
+.carouselItem button
+{
+    background: rgba(0,0,0,.75);
+    justify-self: flex-end;
+    border: none;
+    margin-top: 30px;
+}
+
+.carouselfItem button:hover 
+{
+    cursor: pointer;
+}
+
+.carouselItem h1
+{
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-weight: lighter;
+    font-size: 50px;
 }
 
 @media screen and (max-width: 1080px)

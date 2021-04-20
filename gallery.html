@@ -45,12 +45,7 @@
                 <i class="fas fa-times"></i>
             </div>
         </div>
-        <div class="firstPageDiv limitHeight">
-            <div class="outOfPosition">
-                <a href="https://www.instagram.com/liviya.24/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fas fa-address-book"></i></a>
-            </div>
+        <div class="firstPageDiv limitHeight texturedBackground">
             <div class="navigationBar">
                 <a href="index.html" class="noLeft hoverable">Home</a>
                 <a href="about.html" class="hoverable">About Me</a>
@@ -59,15 +54,38 @@
                 <a href="contact.html" class="hoverable">Contact</a>
             </div>
             <div class="hamburger"><i class="fas fa-bars"></i></div>
-                <div id="bigQuote">
-                    <h1 class="">Liviya's Photo Gallery</h1><br>
-                    <h1 class="smallQuote">"Capture the Good Times"</h1>
+             
+           <div class="carousel">
+                <div id="gal1" class="carouselItem" style="background-color: blue; order: 0;">
+                    <h1>Puppies!</h1>
+                    <button>Open Album</button>
                 </div>
-                <div id="otherQuote">
-                    <a href="about.html"><button>My Bio</button></a>
-                    <button>My Work</button>
+                <div id="gal2" class="carouselItem" style="background-color: yellow; order: 1;">
+                    <h1>Sports</h1>
+                    <button>Open Album</button>
                 </div>
-           
+                <div id="gal3" class="carouselItem" style="background-color: red; order: 2;">
+                    <h1>Me and Eli</h1>
+                    <button>Open Album</button>
+                </div>
+                <div id="gal4" class="carouselItem" style="background-color: green;  order: 3;">
+                    <h1>Friends and Fam</h1>
+                    <button>Open Album</button>
+                </div>
+                <div id="gal5" class="carouselItem" style="background-color: pink; order: 4;">
+                    <h1>Just Me</h1>
+                    <button>Open Album</button>
+                </div>
+           </div>
+           <div class="arrowSpace">
+                <div class="carouselArrows" onclick="leftOrRight('minus')">
+                    <i class="fas fa-chevron-left"></i>     
+                </div>
+                <div class="carouselArrows" onclick="leftOrRight('plus')">
+                <i class="fas fa-chevron-right"></i>    
+                </div>
+           </div>
+
         </div>
     </div>
     <script src="control.js"></script>

@@ -93,3 +93,96 @@ function upOrDown(addOrSub)
     selector[currentSlide].checked = true;
     changeSlides(currentSlide);
 }
+
+
+function openSlideInfo(slideId)
+{
+    let mySlide = document.getElementById(slideId);
+    mySlide.style.display = 'flex';
+    document.getElementById('closeInfo').style.display = 'block'
+}
+
+function closeAllInfo()
+{
+    let myArray = document.querySelectorAll('.slideInfo');
+    myArray.forEach((thisIndex)=>
+    {
+        thisIndex.style.display='none';
+    })
+    document.getElementById('closeInfo').style.display = 'none';
+}
+
+function leftOrRight(direction)
+{
+    let emptyArray = [];
+    let myArray = document.querySelectorAll('.carouselItem');
+    if(direction==='minus')
+    {
+       for(let counter =0; counter < myArray.length; counter++)
+       {
+            if(parseInt(document.querySelectorAll('.carouselItem')[counter].style.order) === myArray.length - 1)
+            {
+                document.querySelectorAll('.carouselItem')[counter].style.order = '0';
+            }
+            else
+            {
+                let myTemporary = parseInt(document.querySelectorAll('.carouselItem')[counter].style.order);
+                myTemporary++;
+                document.querySelectorAll('.carouselItem')[counter].style.order = myTemporary.toString();
+            }
+       }
+    }
+    else
+    {
+        for(let counter =0; counter < myArray.length; counter++)
+       {
+            if(parseInt(document.querySelectorAll('.carouselItem')[counter].style.order) === 0)
+            {
+                document.querySelectorAll('.carouselItem')[counter].style.order = (myArray.length -1).toString();
+            }
+            else
+            {
+                let myTemporary = parseInt(document.querySelectorAll('.carouselItem')[counter].style.order);
+                myTemporary--;
+                document.querySelectorAll('.carouselItem')[counter].style.order = myTemporary.toString();
+            }
+       }
+    }
+
+    for(let counter = 0; counter < myArray.length; counter++)
+    {
+        if(parseInt(document.querySelectorAll('.carouselItem')[counter].style.order) === 2)
+        {
+            
+        }
+    }
+}
+
+function fake()
+{
+    for(let counter = 0; counter < myArray.length; counter++)
+    {
+        console.log(document.querySelectorAll('.carouselItem')[counter].style.order);
+    }
+    for(let counter =0; counter < myArray.length; counter++)
+    {
+        let newInt;
+        let temp = document.querySelectorAll('.carouselItem')[counter].style.order;
+        let integer = parseInt(temp);
+        if(integer === myArray.length - 1)
+        {
+            newInt = 0;
+        }
+        else
+        {
+            newInt = integer++;
+        }
+        let newStringInt = newInt.toString();
+        document.querySelectorAll('.carouselItem')[counter].style.order = newStringInt;
+    }
+    
+    for(let counter = 0; counter < myArray.length; counter++)
+    {
+        console.log(document.querySelectorAll('.carouselItem')[counter].style.order);
+    }
+}

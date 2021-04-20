@@ -13,6 +13,19 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loader">
+       
+            
+        <div class="circle2">
+                
+            </div><div class="circle3">
+                    
+                </div>
+                <div class="circleLetters">
+                        <h1>L B</h1>
+                    </div>
+    
+    </div>
     <div class="styled">
         <div class="smallLogo">
             <a class="signature"><h1 class="cursive">L B</h1></a>
@@ -62,18 +75,33 @@
             </div>
             <div class="twoColumn">
                 <div class="quoteSlideShow">
+                    <div id="closeInfo" onclick="closeAllInfo()">
+                        <i class="fas fa-times"></i>
+                    </div>
                     <div class="pictureBlock">
-                        <div class="slide" id="firstSlide">
-                            <p>Hello</p>
+                        <div class="slide" id="slide1" style="display: flex;">
+                            <p onclick="openSlideInfo('info1')">Softball</p>
+                            <div class="slideInfo" id="info1">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas alias eligendi iusto nemo veritatis excepturi, blanditiis magni inventore nesciunt dignissimos harum velit fuga illo, facere delectus natus aliquid. Ad, deleniti.</p>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <p>Test</p>
+                        <div class="slide" id="slide2">
+                            <p onclick="openSlideInfo('info2')">Running</p>
+                            <div class="slideInfo" id="info2">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas alias eligendi iusto nemo veritatis excepturi, blanditiis magni inventore nesciunt dignissimos harum velit fuga illo, facere delectus natus aliquid. Ad, deleniti.</p>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <p>This</p>
+                        <div class="slide" id="slide3">
+                            <p onclick="openSlideInfo('info3')">Adventure</p>
+                            <div class="slideInfo" id="info3">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas alias eligendi iusto nemo veritatis excepturi, blanditiis magni inventore nesciunt dignissimos harum velit fuga illo, facere delectus natus aliquid. Ad, deleniti.</p>
+                            </div>
                         </div>
-                        <div class="slide">
-                            <p>Guy</p>
+                        <div class="slide" id="slide4">
+                            <p onclick="openSlideInfo('info4')">Hunting</p>
+                            <div class="slideInfo" id="info4">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas alias eligendi iusto nemo veritatis excepturi, blanditiis magni inventore nesciunt dignissimos harum velit fuga illo, facere delectus natus aliquid. Ad, deleniti.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="rightChev" onclick="upOrDown('plus')">
@@ -95,7 +123,7 @@
                 </div>
             </div>
             <div class="artistQuote">
-                <h2 class="quoteText">Every child is an artist. The problem is how to remain an artist once we grow up. <br>&mdash; Pablo Picasso</h2>
+                <h2 class="quoteText">A picture is a poem without words. <br>&mdash; Horace</h2>
                 <div class="leftQuote">
                     <i class="fas fa-quote-left"></i>
                 </div>
@@ -114,7 +142,7 @@
                 </div>
             </div>
             <div class="artistQuote">
-                <h2 class="quoteText">Every child is an artist. The problem is how to remain an artist once we grow up. <br>&mdash; Pablo Picasso</h2>
+                <h2 class="quoteText">Art enables us to find ourselves and lose ourselves at the same time. <br>&mdash; Thomas Merton</h2>
                 <div class="leftQuote">
                     <i class="fas fa-quote-left"></i>
                 </div>
