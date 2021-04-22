@@ -27,6 +27,38 @@
         
     </div>
     <div class="styled">
+
+        <div id="gallery1" class="galleryPage">
+            <div class="closeGallery" onclick="closeGallery()">
+                <i class="fas fa-times"></i>
+            </div>
+            1
+        </div>
+        <div id="gallery2" class="galleryPage">
+            <div class="closeGallery" onclick="closeGallery()">
+                <i class="fas fa-times"></i>
+            </div>
+            2
+        </div>
+        <div id="gallery3" class="galleryPage">
+            <div class="closeGallery" onclick="closeGallery()">
+                <i class="fas fa-times"></i>
+            </div>
+            3
+        </div>
+        <div id="gallery4" class="galleryPage">
+            <div class="closeGallery" onclick="closeGallery()">
+                <i class="fas fa-times"></i>
+            </div>
+            4
+        </div>
+        <div id="gallery5" class="galleryPage">
+            <div class="closeGallery" onclick="closeGallery()">
+                <i class="fas fa-times"></i>
+            </div>
+            5
+        </div>
+
         <div class="smallLogo">
             <a class="signature"><h1 class="cursive">L B</h1></a>
         </div>
@@ -57,24 +89,34 @@
              
            <div class="carousel">
                 <div id="gal1" class="carouselItem" style="background-color: blue; order: 0;">
-                    <h1>Puppies!</h1>
-                    <button>Open Album</button>
+                    <div class="carouselCover">
+                        <h1>Puppies!</h1>
+                        <button style="display: none;" onclick="openGallery('gallery1')">Open Album</button>
+                    </div>
                 </div>
                 <div id="gal2" class="carouselItem" style="background-color: yellow; order: 1;">
-                    <h1>Sports</h1>
-                    <button>Open Album</button>
+                    <div class="carouselCover">
+                        <h1>Sports</h1>
+                        <button style="display: none;" onclick="openGallery('gallery2')">Open Album</button>
+                    </div>
                 </div>
                 <div id="gal3" class="carouselItem" style="background-color: red; order: 2;">
-                    <h1>Me and Eli</h1>
-                    <button>Open Album</button>
+                    <div style="background: rgba(0, 0, 0, 0);" class="carouselCover">
+                        <h1 style="display: none;">Me and Eli</h1>
+                        <button onclick="openGallery('gallery3')">Open Album</button>
+                    </div>
                 </div>
                 <div id="gal4" class="carouselItem" style="background-color: green;  order: 3;">
-                    <h1>Friends and Fam</h1>
-                    <button>Open Album</button>
+                    <div class="carouselCover">
+                        <h1>Friends and Fam</h1>
+                        <button style="display: none;" onclick="openGallery('gallery4')">Open Album</button>
+                    </div>
                 </div>
                 <div id="gal5" class="carouselItem" style="background-color: pink; order: 4;">
-                    <h1>Just Me</h1>
-                    <button>Open Album</button>
+                    <div class="carouselCover">
+                        <h1>Just Me</h1>
+                        <button style="display: none;" onclick="openGallery('gallery5')">Open Album</button>
+                    </div>
                 </div>
            </div>
            <div class="arrowSpace">

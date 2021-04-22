@@ -1,3 +1,8 @@
+setTimeout(()=>
+{
+    
+}, 1000)
+
 window.addEventListener('load', ()=>
 {
     let openDoc = document.querySelector('.styled');
@@ -5,6 +10,8 @@ window.addEventListener('load', ()=>
     let closeLoad = document.querySelector('.loader');
     closeLoad.style.display = 'none';
 })
+
+
 
 window.addEventListener("resize", ()=>
 {
@@ -151,38 +158,35 @@ function leftOrRight(direction)
 
     for(let counter = 0; counter < myArray.length; counter++)
     {
+        let heading = document.querySelectorAll('.carouselCover h1')[counter];
+        let background = document.querySelectorAll('.carouselCover')[counter];
+        let button = document.querySelectorAll('.carouselCover button')[counter];
         if(parseInt(document.querySelectorAll('.carouselItem')[counter].style.order) === 2)
         {
-            
+            heading.style.display = 'none';
+            background.style.background = 'rgba(0,0,0,0)';
+            button.style.display = 'block';
+        }
+        else
+        {
+            heading.style.display = 'block';
+            background.style.background = 'rgba(0,0,0,0.5)';
+            button.style.display = 'none';
         }
     }
 }
 
-function fake()
+function closeGallery()
 {
-    for(let counter = 0; counter < myArray.length; counter++)
-    {
-        console.log(document.querySelectorAll('.carouselItem')[counter].style.order);
-    }
+    let myArray = document.querySelectorAll('.galleryPage');
     for(let counter =0; counter < myArray.length; counter++)
     {
-        let newInt;
-        let temp = document.querySelectorAll('.carouselItem')[counter].style.order;
-        let integer = parseInt(temp);
-        if(integer === myArray.length - 1)
-        {
-            newInt = 0;
-        }
-        else
-        {
-            newInt = integer++;
-        }
-        let newStringInt = newInt.toString();
-        document.querySelectorAll('.carouselItem')[counter].style.order = newStringInt;
+        myArray[counter].style.display = 'none';
     }
-    
-    for(let counter = 0; counter < myArray.length; counter++)
-    {
-        console.log(document.querySelectorAll('.carouselItem')[counter].style.order);
-    }
+}
+
+function openGallery(galleryID)
+{
+    let openSlide = document.getElementById(galleryID);
+    openSlide.style.display = 'flex';
 }
