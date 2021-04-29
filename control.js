@@ -1,8 +1,3 @@
-setTimeout(()=>
-{
-    
-}, 1000)
-
 window.addEventListener('load', ()=>
 {
     let openDoc = document.querySelector('.styled');
