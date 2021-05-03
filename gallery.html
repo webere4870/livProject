@@ -27,15 +27,38 @@
         
     </div>
     <div class="styled">
-
         <div id="gallery1" class="galleryPage">
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
             </div>
-            <h1>Sup</h1>
+            <!-- <div class="cursorAnimation">
+                <h1>Click pictures to reveal info</h1>
+                <i class="far fa-file-image"></i>
+            <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
+            </div> -->
             <div class="galleryRow">
                 <div class="galleryColumn">
-                    <img src="/images/aboutPicture.png" alt="">
+                    
+                        <div class="overCard">
+                            <div class="subCard" id="firstCard">
+                                <div class="frontCard" onclick="cardFlip('firstCard')">
+                                    <img src="./images/gal1.JPG" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('firstCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overCard">
+                            <div class="subCard" id="secondCard">
+                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                                    <img src="./images/mainBackground.jpg" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
                     <img src="/images/aboutPicture2.png" alt="">
                     <img src="/images/gal1.JPG" alt="">
                     <img src="/images/slide1.jpg" alt="">
@@ -247,8 +270,8 @@
                     </div>
                 </div>
                 <div id="gal3" class="carouselItem" style="background-color: red; order: 2;">
-                    <div style="background: rgba(0, 0, 0, 0);" class="carouselCover">
-                        <h1 style="display: none;">Me and Eli</h1>
+                    <div class="carouselCover centerSlide">
+                        <h1>Me and Eli</h1>
                         <button onclick="openGallery('gallery3')">Open Album</button>
                     </div>
                 </div>

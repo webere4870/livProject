@@ -25,6 +25,23 @@ window.addEventListener("resize", ()=>
         document.querySelector('.smallLogo').style.display='none'
         document.querySelector('.outOfPosition').style.display = 'flex';
     }
+
+    let arrayOfColumns = document.querySelectorAll('.changeOrder');
+
+    // if(window.innerWidth < 860)
+    // {
+    //     for(let counter =0; counter < arrayOfColumns.length; counter++)
+    //     {
+    //         arrayOfColumns[counter].style.order = '1';
+    //     }
+    // }
+    // else
+    // {
+    //     for(let counter =0; counter < arrayOfColumns.length; counter++)
+    //     {
+    //         arrayOfColumns[counter].style.order = '-1';
+    //     }
+    // }
 })
 
 document.querySelector('.hamburger').addEventListener("click", ()=>
@@ -116,7 +133,6 @@ function closeAllInfo()
 
 function leftOrRight(direction)
 {
-    let emptyArray = [];
     let myArray = document.querySelectorAll('.carouselItem');
     if(direction==='minus')
     {
@@ -149,17 +165,19 @@ function leftOrRight(direction)
                 document.querySelectorAll('.carouselItem')[counter].style.order = myTemporary.toString();
             }
        }
-    }
-
-    for(let counter = 0; counter < myArray.length; counter++)
+    } 
+        
+    if(window.innerWidth)
+    {
+        for(let counter = 0; counter < myArray.length; counter++)
     {
         let heading = document.querySelectorAll('.carouselCover h1')[counter];
         let background = document.querySelectorAll('.carouselCover')[counter];
         let button = document.querySelectorAll('.carouselCover button')[counter];
         if(parseInt(document.querySelectorAll('.carouselItem')[counter].style.order) === 2)
         {
-            heading.style.display = 'none';
-            background.style.background = 'rgba(0,0,0,0)';
+            heading.style.display = 'block';
+            background.style.background = 'rgba(0,0,0,0.5)';
             button.style.display = 'block';
         }
         else
@@ -169,6 +187,9 @@ function leftOrRight(direction)
             button.style.display = 'none';
         }
     }
+       
+    }
+    
 }
 
 function closeGallery()
@@ -184,4 +205,27 @@ function openGallery(galleryID)
 {
     let openSlide = document.getElementById(galleryID);
     openSlide.style.display = 'flex';
+}
+
+function clickToReveal(id, info)
+{
+    let revealedPic = document.getElementById(id);
+}
+
+async function cardFlip(id)
+{
+    let flipCard = document.getElementById(id);
+    flipCard.style.transform = 'rotateY(180deg)';
+    let myGuy = await returnBlank();
+    flipCard.style.transform = 'rotateY(0deg)';
+}
+
+function returnBlank()
+{
+    return new Promise((resolve)=>
+    {
+        setTimeout(() => {
+            resolve('resolved');
+          }, 5000);
+    })
 }

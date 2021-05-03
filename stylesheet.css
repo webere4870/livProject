@@ -138,6 +138,7 @@ form button:hover
     justify-content: center;
     align-items: center;
     display: none;
+    flex-direction: column;
 }
 
 .galleryPage h1
@@ -153,6 +154,7 @@ form button:hover
     top: 15px;
     right: 15px;
     color: white;
+    z-index: 10;
 }
 
 .closeGallery:hover
@@ -329,8 +331,6 @@ form button:hover
     font-family: 'Spartan', sans-serif;
     color: white;
     font-size: 30px;
-    padding-left: 40px;
-    margin-right: auto;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
@@ -359,17 +359,17 @@ form button:hover
 
 .carouselItem button:hover
 {
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    background: black;
     cursor: pointer;
 }
 
 .signature
 {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
-    border-left: 7px solid white;
-    border-right: 7px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,14 +382,13 @@ form button:hover
 
 .signature:hover
 {
-    text-decoration: none;
-    transform: rotateY(720deg);
-    transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .cursive
 {
     font-family: 'Rochester', cursive;
+    font-size: 20px;
 }
 
 .smallQuote
@@ -670,7 +669,29 @@ i
     }
 }
 
+@keyframes clickImage
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+        transform: translateY(-30px);
+    }
+}
 
+@keyframes closePage
+{
+    0%
+    {
+        
+    }
+    100%
+    {
+        display: none;
+    }
+}
 
 .quoteSlideShow
 {
@@ -904,6 +925,11 @@ i
     align-items: center;
 }
 
+.carouselCover *
+{
+    margin: -180px 0;
+}
+
 .fa-folder-open
 {
     font-size: 20px;
@@ -979,6 +1005,11 @@ i
     margin: 0;
 }
 
+.fa-file-image
+{
+    font-size: 80px;
+}
+
 .galleryColumn
 {
     flex: 25%;
@@ -992,6 +1023,85 @@ i
     padding: 8px 8px;
 }
 
+#passwordPage
+{
+    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#passwordPage label
+{
+    color: white;
+    font-family: 'Amatic SC', 'cursive';
+}
+
+#passwordPage input, #passwordPage label
+{
+    margin: 10px;
+}
+
+.firstButton
+{
+    background: rgba(0, 0, 0, .2);
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid white;
+    font-family: 'Spartan', cursive;
+    font-size: 15px;
+    margin: 0 5px;
+}
+
+.firstButton:hover
+{
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.cursorAnimation
+{
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    color: white;
+    animation-name: closePage;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+#cursorPic
+{
+    animation-name: clickImage;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 3;
+    transform: translateY(30px);
+}
+
+.cursorAnimation h1
+{
+    font-family: 'Spartan', 'cursive';
+    padding: 20px;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
 @media screen and (max-width: 800px)
 {
     .galleryColumn
@@ -999,6 +1109,115 @@ i
         flex: 50%;
         max-width: 50%;
     }
+    .mainTitle
+    {
+        font-size: 40px;
+    }
+    .smallQuote
+    {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 860px)
+{
+    .aboutPicture
+{
+    border-radius: 50%;
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 20px 0;
+}
+
+
+.aboutPicture img{
+    border-radius: 50%;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    padding: 10px;
+}
+
+.leftQuote
+{
+    top: -20px;
+}
+
+.rightQuote
+{
+    bottom: -20px;
+}
+
+.aboutSlide
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+}
+
+.aboutSlide h1
+{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.aboutSlide p
+{
+    text-align: center;
+}
+
+}
+
+.overCard
+{
+    perspective: 1000px;
+}
+
+.subCard
+{
+    position: relative;
+    transform-style: preserve-3d;
+    transition-timing-function: ease-in-out;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+}
+
+.frontCard
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: visible;
+}
+
+.backCard
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Spartan', 'cursive';
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border: 2px solid white;
+    background: rgba(0,0,0,0.7);
 }
 
 @media screen and (max-width: 600px)
@@ -1007,6 +1226,25 @@ i
     {
         flex: 100%;
         max-width: 100%;
+    }
+    .mainTitle
+    {
+        font-size: 30px;
+    }
+    .smallQuote
+    {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 1030px)
+{
+    .carouselItem button{
+        justify-self: center;
+    }
+    .carouselItem h1
+    {
+        justify-self: center;
     }
 }
 
