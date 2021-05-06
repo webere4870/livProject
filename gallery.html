@@ -31,11 +31,11 @@
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
             </div>
-            <!-- <div class="cursorAnimation">
+            <div class="cursorAnimation">
                 <h1>Click pictures to reveal info</h1>
                 <i class="far fa-file-image"></i>
             <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
-            </div> -->
+            </div>
             <div class="galleryRow">
                 <div class="galleryColumn">
                     
@@ -59,10 +59,46 @@
                                 </div>
                             </div>
                         </div>
-                    <img src="/images/aboutPicture2.png" alt="">
-                    <img src="/images/gal1.JPG" alt="">
-                    <img src="/images/slide1.jpg" alt="">
-                    <img src="/images/mainBackground.jpg" alt="">
+                        <div class="overCard">
+                            <div class="subCard" id="secondCard">
+                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                                    <img src="/images/aboutPicture2.png" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overCard">
+                            <div class="subCard" id="secondCard">
+                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                                    <img src="/images/slide1.jpg" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overCard">
+                            <div class="subCard" id="secondCard">
+                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                                    <img src="/images/gal3.jpg" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="overCard">
+                            <div class="subCard" id="secondCard">
+                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                                    <img src="/images/gal3.jpg" alt="">
+                                </div>
+                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <div class="galleryColumn">
                     <img src="/images/aboutPicture.png" alt="">
@@ -90,6 +126,11 @@
         <div id="gallery2" class="galleryPage">
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
+            </div>
+            <div class="cursorAnimation">
+                <h1>Click pictures to reveal info</h1>
+                <i class="far fa-file-image"></i>
+            <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
             </div>
             <div class="galleryRow">
                 <div class="galleryColumn">
@@ -126,6 +167,11 @@
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
             </div>
+            <div class="cursorAnimation">
+                <h1>Click pictures to reveal info</h1>
+                <i class="far fa-file-image"></i>
+            <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
+            </div>
             <div class="galleryRow">
                 <div class="galleryColumn">
                     <img src="/images/aboutPicture.png" alt="">
@@ -161,6 +207,11 @@
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
             </div>
+            <div class="cursorAnimation">
+                <h1>Click pictures to reveal info</h1>
+                <i class="far fa-file-image"></i>
+            <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
+            </div>
             <div class="galleryRow">
                 <div class="galleryColumn">
                     <img src="/images/aboutPicture.png" alt="">
@@ -195,6 +246,11 @@
         <div id="gallery5" class="galleryPage">
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
+            </div>
+            <div class="cursorAnimation">
+                <h1>Click pictures to reveal info</h1>
+                <i class="far fa-file-image"></i>
+            <img src="/images/cursor.png" alt="" style="height: 50px;" id="cursorPic">
             </div>
             <div class="galleryRow">
                 <div class="galleryColumn">
@@ -260,7 +316,7 @@
                 <div id="gal1" class="carouselItem" style="background-color: blue; order: 0;">
                     <div class="carouselCover">
                         <h1>Puppies!</h1>
-                        <button style="display: none;" onclick="openGallery('gallery1')">Open Album</button>
+                        <button id="testThisBoi" style="display: none;" onclick="openGallery('gallery1')">Open Album</button>
                     </div>
                 </div>
                 <div id="gal2" class="carouselItem" style="background-color: yellow; order: 1;">

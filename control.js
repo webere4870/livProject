@@ -205,6 +205,7 @@ function openGallery(galleryID)
 {
     let openSlide = document.getElementById(galleryID);
     openSlide.style.display = 'flex';
+    carouselAnimation();
 }
 
 function clickToReveal(id, info)
@@ -228,4 +229,33 @@ function returnBlank()
             resolve('resolved');
           }, 5000);
     })
+}
+
+function returnBlankCarousel()
+{
+    return new Promise((resolve)=>
+    {
+        setTimeout(() => {
+            resolve('resolved');
+          }, 3000);
+    })
+}
+
+
+async function carouselAnimation()
+{
+    let arrayOfAnimations = document.querySelectorAll('.cursorAnimation');
+    for(let counter = 0; counter < arrayOfAnimations.length; counter++)
+    {
+        arrayOfAnimations[counter].style.display = 'flex';
+    }
+    document.querySelector('body').style.overflow = 'hidden';
+
+    let fakePromise = await returnBlankCarousel();
+
+    for(let counter = 0; counter < arrayOfAnimations.length; counter++)
+    {
+        arrayOfAnimations[counter].style.display = 'none';
+    }
+    document.querySelector('body').style.overflow = 'visible';
 }
