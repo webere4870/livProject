@@ -5,9 +5,14 @@
     padding: 0;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 .styled
 {
-    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./images/mainBackground.jpg');
+    background: url('./images/mainBackground.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -21,6 +26,12 @@
 {
     width: 400px;
     height: 300px;
+}
+
+body
+{
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 #mapPage
@@ -55,9 +66,10 @@
 
 form
 {
-    width: 400px;
     text-align: right;
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0));
+    justify-self: center;
+    align-self: center;
 }
 
 form input
@@ -103,13 +115,31 @@ form button
     font-family: 'Spartan', 'cursive';
     background: rgba(0,0,0,0.75);
     border: none;
-    padding: 10px 20px;
-    margin-left: 100px;
 }
 
 form button:hover
 {
     background: black;
+}
+
+.buttonAlign
+{
+    text-align: left;
+    padding-left: 20px;
+}
+
+::placeholder
+{
+    color: white;
+    opacity: .5;
+}
+
+.sendMessage
+{
+    color: white;
+    font-size: 50px;
+    font-family: 'Spartan', 'cursive';
+    font-weight: lighter;
 }
 
 #submit
@@ -132,7 +162,9 @@ form button:hover
     left: 0;
     min-height: 100vh;
     max-width: 100vw;
-    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0)); 
+    background-size: contain;
+    background-position: center;
     background-attachment: fixed;
     z-index: 10000;
     justify-content: center;
@@ -339,7 +371,7 @@ form button:hover
 #otherQuote
 {
     width: 100%;
-    margin-right: auto;
+    
     justify-self: flex-start;
     align-self: center;
     text-align: center;
@@ -365,8 +397,8 @@ form button:hover
 
 .signature
 {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border-left: 4px solid white;
     border-right: 4px solid white;
@@ -388,7 +420,7 @@ form button:hover
 .cursive
 {
     font-family: 'Rochester', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .smallQuote
@@ -699,8 +731,8 @@ i
     width: 400px;
     position: relative;
     background: black;
-    margin-top: 10px;
-    padding-right: 100px;
+    
+    
 }
 
 .quoteSlideShow p
@@ -884,7 +916,10 @@ i
 
 .texturedBackground
 {
-    background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0));
+    /* background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0)); */
+    background: url('/images/mainBackground.jpg');
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
 }
 
@@ -909,6 +944,7 @@ i
     justify-content: center;
     align-items: center;
     position: relative;
+    border: 1px solid white;
 }
 
 .carouselCover
@@ -1105,6 +1141,10 @@ body
 
 @media screen and (max-width: 800px)
 {
+    .carouselItem
+    {
+        margin: 0 10px;
+    }
     .galleryColumn
     {
         flex: 50%;
@@ -1131,7 +1171,12 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 80px 0 20px 0;
+    margin: 80px 0 80px 0;
+}
+
+.leftAlign
+{
+    margin: 30px 0 30px 0;
 }
 
 
@@ -1170,6 +1215,11 @@ body
 .aboutSlide p
 {
     text-align: center;
+}
+
+.moveUp
+{
+    margin-top: -50px;
 }
 
 }
@@ -1230,11 +1280,28 @@ body
     }
     .mainTitle
     {
-        font-size: 30px;
+        font-size: 40px;
     }
     .smallQuote
     {
         font-size: 35px;
+    }
+    .outOfPosition
+    {
+        display: none;
+    }
+    .leftQuote
+    {
+        top: -40px;
+    }
+
+    .rightQuote
+    {
+        bottom: -40px;
+    }
+    .sendMessage
+    {
+        font-size: 30px;
     }
 }
 
@@ -1257,5 +1324,9 @@ body
     .hamburger
     {
         display: block;
+    }
+    .smallLogo
+    {
+        display: flex;
     }
 }

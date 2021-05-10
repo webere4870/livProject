@@ -15,14 +15,14 @@ window.addEventListener("resize", ()=>
     {
         document.querySelector('.hamburger').style.display = "block";
         document.querySelector('.navigationBar').style.display = 'none'
-        document.querySelector('.smallLogo').style.display='block'
+        // document.querySelector('.smallLogo').style.display='block'
         document.querySelector('.outOfPosition').style.display = 'none';
     }
     else
     {
         document.querySelector('.hamburger').style.display = "none";
         document.querySelector('.navigationBar').style.display = 'flex'
-        document.querySelector('.smallLogo').style.display='none'
+        // document.querySelector('.smallLogo').style.display='none'
         document.querySelector('.outOfPosition').style.display = 'flex';
     }
 

@@ -75,18 +75,18 @@ if(isset($_POST['submit'])){
             <a href="contact.html" class="hoverable">Contact</a>
             <div>
                 <a href="https://www.instagram.com/liviya.24/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fas fa-address-book"></i></a>
+                <a href="https://www.tiktok.com/@liv.benjamin?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="contact.html"><i class="fas fa-address-book"></i></a>
             </div>
             <div class="xButton">
                 <i class="fas fa-times"></i>
             </div>
         </div>
-        <div class="firstPageDiv">
+        <div class="firstPageDiv limitHeight">
             <div class="outOfPosition">
                 <a href="https://www.instagram.com/liviya.24/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fas fa-address-book"></i></a>
+                <a href="https://www.tiktok.com/@liv.benjamin?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="contact.html"><i class="fas fa-address-book"></i></a>
             </div>
             <div class="navigationBar">
                 <a href="index.html" class="noLeft hoverable">Home</a>
@@ -96,35 +96,26 @@ if(isset($_POST['submit'])){
                 <a href="contact.html" class="hoverable">Contact</a>
             </div>
             <div class="hamburger"><i class="fas fa-bars"></i></div>
-            <div class="contactPage">
-
-            </div>
-            <div id="mapPage">
-            
-           
-            <div id="map">
-
-            </div>
+            <br>
+            <br>
+            <br>
+            <h1 class="sendMessage" style="text-align: center;">Send me a message!</h1>
             <form action="mail.php" method="POST">
                 <ul>
                     <li>
-                        <label for="name">First Name:</label>
-                        <input type="text" name="name" id="first_name">
+                        <input type="text" name="name" id="first_name" placeholder="Name: (E.G. Michael Scott)">
                     </li>
                     <li>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="Email: ">
                     </li>
                     <li>
-                        <label for="message">Message:</label>
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Write a message..."></textarea>
                     </li>
-                    <li style="text-align: center;">
+                    <li class="buttonAlign">
                         <input id="submit" type="submit" name="submit" value="Submit">
                     </li>
                 </ul>
             </form>
-            </div>
         </div>
 
         </div>
