@@ -74,7 +74,7 @@ form
 
 form input
 {
-    width: 300px;
+    width: 350px;
     height: 30px;
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5));
     border: 1px solid black;
@@ -84,7 +84,7 @@ form input
 
 textarea
 {
-    width: 300px;
+    width: 350px;
     vertical-align: top;
     background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
     border: 1px solid black;
@@ -115,6 +115,8 @@ form button
     font-family: 'Spartan', 'cursive';
     background: rgba(0,0,0,0.75);
     border: none;
+    width: 100vw;
+    
 }
 
 form button:hover
@@ -124,8 +126,8 @@ form button:hover
 
 .buttonAlign
 {
-    text-align: left;
-    padding-left: 20px;
+    text-align: left;  
+    padding-left: 40px;
 }
 
 ::placeholder
@@ -163,7 +165,7 @@ form button:hover
     min-height: 100vh;
     max-width: 100vw;
     background: linear-gradient(rgb(63, 0, 92), rgb(0, 0, 0)); 
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     z-index: 10000;
@@ -215,7 +217,7 @@ form button:hover
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 100000000;
     display: none;
     justify-content: center;
     align-items: center;
@@ -731,8 +733,6 @@ i
     width: 400px;
     position: relative;
     background: black;
-    
-    
 }
 
 .quoteSlideShow p
@@ -746,6 +746,13 @@ i
     cursor: pointer;
 }
 
+.slide
+{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #slide1
 {
     background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide1.jpg");
@@ -753,12 +760,12 @@ i
 
 #slide2
 {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/slide2.jpg");
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("/images/slide2.JPG");
 }
 
 #slide3
 {
-    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide3.jpg");
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("/images/slide3.JPG");
 }
 
 #slide4
@@ -989,27 +996,27 @@ i
 
 #gal1
 {
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal5.JPG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal5.jpg');
 }
 
 #gal2
 {
-    background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.0)), url('/images/gal4.JPG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal4.jpg');
 }
 
 #gal3
 {
-    background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.0)), url('/images/gal1.JPG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal1.JPG');
 }
 
 #gal4
 {
-    background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.0)), url('/images/gal2.JPG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal2.jpg');
 }
 
 #gal5
 {
-    background: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,.0)), url('/images/gal3.JPG');
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url('/images/gal3.jpg');
 }
 
 .carouselItem button
@@ -1227,12 +1234,14 @@ body
 .overCard
 {
     perspective: 1000px;
+    -webkit-perspective: 1000px;
 }
 
 .subCard
 {
     position: relative;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transition-timing-function: ease-in-out;
     transition: all 1s;
     height: 100%;
@@ -1250,6 +1259,8 @@ body
     justify-content: center;
     align-items: center;
     backface-visibility: visible;
+    -webkit-backface-visibility: hidden;
+    z-index: -200;
 }
 
 .backCard
@@ -1266,8 +1277,9 @@ body
     color: white;
     font-family: 'Spartan', 'cursive';
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transform: rotateY(180deg);
-    border: 2px solid white;
+    
     background: rgba(0,0,0,0.7);
 }
 
@@ -1302,6 +1314,28 @@ body
     .sendMessage
     {
         font-size: 30px;
+    }
+
+    form input{
+        width: 350px;
+        height: 40px;
+    }
+    textarea
+    {
+        width: 350px;
+    }
+    .quoteSlideShow
+    {
+        height: 240px;
+        width: 320px;
+    }
+    .quoteSlideShow .slide > p
+    {
+        font-size: 40px;
+    }
+    .quoteSlideShow .slideInfo p
+    {
+        font-size: 15px;
     }
 }
 

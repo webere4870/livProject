@@ -1,5 +1,6 @@
-window.addEventListener('load', ()=>
+window.addEventListener('load', async ()=>
 {
+    let myGuy = await loadingScreen();
     let openDoc = document.querySelector('.styled');
     openDoc.style.display = 'block';
     let closeLoad = document.querySelector('.loader');
@@ -54,6 +55,7 @@ document.querySelector('.xButton').addEventListener('click', ()=>
 {
     document.querySelector('.smallNavigationBar').style.display = 'none';   
     document.querySelector('body').style.overflowY = 'initial';
+    document.querySelector('.smallLogo').style.display='flex'
 })
 
 
@@ -199,6 +201,7 @@ function closeGallery()
     {
         myArray[counter].style.display = 'none';
     }
+    document.querySelector('.smallLogo').style.display='flex'
 }
 
 function openGallery(galleryID)
@@ -206,6 +209,7 @@ function openGallery(galleryID)
     let openSlide = document.getElementById(galleryID);
     openSlide.style.display = 'flex';
     carouselAnimation();
+    document.querySelector('.smallLogo').style.display='none'
 }
 
 function clickToReveal(id, info)
@@ -238,6 +242,16 @@ function returnBlankCarousel()
         setTimeout(() => {
             resolve('resolved');
           }, 3000);
+    })
+}
+
+function loadingScreen()
+{
+    return new Promise((resolve)=>
+    {
+        setTimeout(() => {
+            resolve('resolved');
+          }, 2000);
     })
 }
 

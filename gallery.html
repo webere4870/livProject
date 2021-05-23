@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,7 +29,9 @@
         
     </div>
     <div class="styled">
-        
+        <div class="smallLogo">
+            <a class="signature" style="z-index: 100000"><h1 class="cursive">L B</h1></a>
+        </div>
         <div id="gallery1" class="galleryPage">
             <div class="closeGallery" onclick="closeGallery()">
                 <i class="fas fa-times"></i>
@@ -61,67 +65,235 @@
                             </div>
                         </div>
                         <div class="overCard">
-                            <div class="subCard" id="secondCard">
-                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                            <div class="subCard" id="thirdCard">
+                                <div class="frontCard" onclick="cardFlip('thirdCard')">
                                     <img src="/images/aboutPicture2.png" alt="">
                                 </div>
-                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                <div class="backCard" onclick="cardFlip('thirdCard')">
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="overCard">
-                            <div class="subCard" id="secondCard">
-                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                            <div class="subCard" id="fourthCard">
+                                <div class="frontCard" onclick="cardFlip('fourthCard')">
                                     <img src="/images/slide1.jpg" alt="">
                                 </div>
-                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                <div class="backCard" onclick="cardFlip('fourthCard')">
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="overCard">
-                            <div class="subCard" id="secondCard">
-                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                            <div class="subCard" id="fifthCard">
+                                <div class="frontCard" onclick="cardFlip('fifthCard')">
                                     <img src="/images/gal3.jpg" alt="">
                                 </div>
-                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                <div class="backCard" onclick="cardFlip('fifthCard')">
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
                                 </div>
                             </div>
                         </div>
                         <div class="overCard">
-                            <div class="subCard" id="secondCard">
-                                <div class="frontCard" onclick="cardFlip('secondCard')">
+                            <div class="subCard" id="sixthCard">
+                                <div class="frontCard" onclick="cardFlip('sixthCard')">
                                     <img src="/images/gal3.jpg" alt="">
                                 </div>
-                                <div class="backCard" onclick="cardFlip('secondCard')">
+                                <div class="backCard" onclick="cardFlip('sixthCard')">
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
                                 </div>
                             </div>
                         </div>
                 </div>
                 <div class="galleryColumn">
-                    <img src="/images/aboutPicture.png" alt="">
-                    <img src="/images/slide1.jpg" alt="">
-                    <img src="/images/aboutPicture2.png" alt="">
-                    <img src="/images/gal1.JPG" alt="">
-                    <img src="/images/mainBackground.jpg" alt="">
+                    
+                    <div class="overCard">
+                        <div class="subCard" id="firstCard">
+                            <div class="frontCard" onclick="cardFlip('firstCard')">
+                                <img src="./images/gal1.JPG" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('firstCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overCard">
+                        <div class="subCard" id="secondCard">
+                            <div class="frontCard" onclick="cardFlip('secondCard')">
+                                <img src="./images/mainBackground.jpg" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('secondCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overCard">
+                        <div class="subCard" id="thirdCard">
+                            <div class="frontCard" onclick="cardFlip('thirdCard')">
+                                <img src="/images/aboutPicture2.png" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('thirdCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overCard">
+                        <div class="subCard" id="fourthCard">
+                            <div class="frontCard" onclick="cardFlip('fourthCard')">
+                                <img src="/images/slide1.jpg" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('fourthCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overCard">
+                        <div class="subCard" id="fifthCard">
+                            <div class="frontCard" onclick="cardFlip('fifthCard')">
+                                <img src="/images/gal3.jpg" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('fifthCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overCard">
+                        <div class="subCard" id="sixthCard">
+                            <div class="frontCard" onclick="cardFlip('sixthCard')">
+                                <img src="/images/gal3.jpg" alt="">
+                            </div>
+                            <div class="backCard" onclick="cardFlip('sixthCard')">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="galleryColumn">
+                    
+                <div class="overCard">
+                    <div class="subCard" id="firstCard">
+                        <div class="frontCard" onclick="cardFlip('firstCard')">
+                            <img src="./images/gal1.JPG" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('firstCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="galleryColumn">
-                    <img src="/images/aboutPicture.png" alt="">
-                    <img src="/images/slide1.jpg" alt="">
-                    <img src="/images/aboutPicture2.png" alt="">
-                    <img src="/images/gal1.JPG" alt="">
-                    <img src="/images/mainBackground.jpg" alt="">
+                <div class="overCard">
+                    <div class="subCard" id="secondCard">
+                        <div class="frontCard" onclick="cardFlip('secondCard')">
+                            <img src="./images/mainBackground.jpg" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('secondCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="galleryColumn">
-                    <img src="/images/aboutPicture.png" alt="">
-                    <img src="/images/slide1.jpg" alt="">
-                    <img src="/images/aboutPicture2.png" alt="">
-                    <img src="/images/gal1.JPG" alt="">
-                    <img src="/images/mainBackground.jpg" alt="">
+                <div class="overCard">
+                    <div class="subCard" id="thirdCard">
+                        <div class="frontCard" onclick="cardFlip('thirdCard')">
+                            <img src="/images/aboutPicture2.png" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('thirdCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="overCard">
+                    <div class="subCard" id="fourthCard">
+                        <div class="frontCard" onclick="cardFlip('fourthCard')">
+                            <img src="/images/slide1.jpg" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('fourthCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overCard">
+                    <div class="subCard" id="fifthCard">
+                        <div class="frontCard" onclick="cardFlip('fifthCard')">
+                            <img src="/images/gal3.jpg" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('fifthCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overCard">
+                    <div class="subCard" id="sixthCard">
+                        <div class="frontCard" onclick="cardFlip('sixthCard')">
+                            <img src="/images/gal3.jpg" alt="">
+                        </div>
+                        <div class="backCard" onclick="cardFlip('sixthCard')">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="galleryColumn">
+                    
+            <div class="overCard">
+                <div class="subCard" id="firstCard">
+                    <div class="frontCard" onclick="cardFlip('firstCard')">
+                        <img src="./images/gal1.JPG" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('firstCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overCard">
+                <div class="subCard" id="secondCard">
+                    <div class="frontCard" onclick="cardFlip('secondCard')">
+                        <img src="./images/mainBackground.jpg" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('secondCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overCard">
+                <div class="subCard" id="thirdCard">
+                    <div class="frontCard" onclick="cardFlip('thirdCard')">
+                        <img src="/images/aboutPicture2.png" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('thirdCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overCard">
+                <div class="subCard" id="fourthCard">
+                    <div class="frontCard" onclick="cardFlip('fourthCard')">
+                        <img src="/images/slide1.jpg" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('fourthCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overCard">
+                <div class="subCard" id="fifthCard">
+                    <div class="frontCard" onclick="cardFlip('fifthCard')">
+                        <img src="/images/gal3.jpg" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('fifthCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overCard">
+                <div class="subCard" id="sixthCard">
+                    <div class="frontCard" onclick="cardFlip('sixthCard')">
+                        <img src="/images/gal3.jpg" alt="">
+                    </div>
+                    <div class="backCard" onclick="cardFlip('sixthCard')">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, esse!</p>
+                    </div>
+                </div>
+            </div>
+    </div>
             </div>
         </div>
         <div id="gallery2" class="galleryPage">
@@ -285,9 +457,7 @@
             </div>
         </div>
 
-        <div class="smallLogo">
-            <a class="signature" style="z-index: 100000"><h1 class="cursive">L B</h1></a>
-        </div>
+        
         <div class="smallNavigationBar">
             <a class="signature"><h1 class="cursive">L B</h1></a>
             <a href="index.html" class="noLeft hoverable">Home</a>
@@ -314,31 +484,31 @@
             <div class="hamburger"><i class="fas fa-bars"></i></div>
              
            <div class="carousel">
-                <div id="gal1" class="carouselItem" style="background-color: blue; order: 0;">
+                <div id="gal1" class="carouselItem" style="order: 0;">
                     <div class="carouselCover">
                         <h1>Puppies!</h1>
                         <button id="testThisBoi" style="display: none;" onclick="openGallery('gallery1')">Open Album</button>
                     </div>
                 </div>
-                <div id="gal2" class="carouselItem" style="background-color: yellow; order: 1;">
+                <div id="gal2" class="carouselItem" style="order: 1;">
                     <div class="carouselCover">
                         <h1>Sports</h1>
                         <button style="display: none;" onclick="openGallery('gallery2')">Open Album</button>
                     </div>
                 </div>
-                <div id="gal3" class="carouselItem" style="background-color: red; order: 2;">
-                    <div class="carouselCover centerSlide">
+                <div id="gal3" class="carouselItem" style="order: 2;">
+                    <div class="carouselCover">
                         <h1>Me and Eli</h1>
                         <button onclick="openGallery('gallery3')">Open Album</button>
                     </div>
                 </div>
-                <div id="gal4" class="carouselItem" style="background-color: green;  order: 3;">
+                <div id="gal4" class="carouselItem" style="order: 3;">
                     <div class="carouselCover">
                         <h1>Friends and Fam</h1>
                         <button style="display: none;" onclick="openGallery('gallery4')">Open Album</button>
                     </div>
                 </div>
-                <div id="gal5" class="carouselItem" style="background-color: pink; order: 4;">
+                <div id="gal5" class="carouselItem" style="order: 4;">
                     <div class="carouselCover">
                         <h1>Just Me</h1>
                         <button style="display: none;" onclick="openGallery('gallery5')">Open Album</button>
